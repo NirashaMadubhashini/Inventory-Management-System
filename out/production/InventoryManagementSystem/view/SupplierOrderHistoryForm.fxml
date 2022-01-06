@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="SupplierOrderHistoryContext" prefHeight="1000.0" prefWidth="1950.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.SupplierOrderHistoryFormController">
+   <children>
+      <Pane prefHeight="67.0" prefWidth="1950.0" style="-fx-background-color: #007BFF;">
+         <children>
+            <Label layoutX="62.0" layoutY="18.0" text="Sell-" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="119.0" layoutY="13.0" text="X" textFill="ORANGE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="1742.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackSupplierOrderOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #007bff;                     -fx-background-radius: 8;" text="     Back" textFill="#fefeff">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1750.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/b%203.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="261.0" layoutY="116.0" text="History Of The Supplier Order">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="261.0" layoutY="171.0" prefHeight="5.0" prefWidth="446.0" />
+      <TableView fx:id="tblSupplierHistory" layoutX="261.0" layoutY="348.0" prefHeight="518.0" prefWidth="1340.0">
+        <columns>
+          <TableColumn fx:id="colSupplierHistoryOrderId" prefWidth="109.00003051757812" text="Order-Id" />
+          <TableColumn fx:id="colSupplierHistorySupplierNIC" prefWidth="159.0" text="Supplier-NIC" />
+            <TableColumn fx:id="colSupplierHistoryProductId" prefWidth="146.0" text="Product Id" />
+            <TableColumn fx:id="colSupplierHistoryProductName" prefWidth="169.0" text="Product Name" />
+            <TableColumn fx:id="colSupplierHistoryUnitPrice" prefWidth="109.0" text="Unit Price" />
+            <TableColumn fx:id="colSupplierHistoryQtyOnHand" prefWidth="112.0" text="QtyOnHand" />
+            <TableColumn fx:id="colSupplierHistoryTotal" prefWidth="159.0" text="Total" />
+            <TableColumn fx:id="colSupplierHistoryDate" prefWidth="187.0" text="Date" />
+            <TableColumn fx:id="colSupplierHistoryTime" prefWidth="188.0" text="Time" />
+        </columns>
+      </TableView>
+      <Button layoutX="1144.0" layoutY="267.0" mnemonicParsing="false" onAction="#SupplierShowReportOnAction" prefHeight="60.0" prefWidth="446.0" style="-fx-background-color: #44bd32; -fx-background-radius: 8; " text="Show Reports" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1224.0" layoutY="282.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/report%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtSupplierNICSearch" layoutX="261.0" layoutY="289.0" onAction="#SupplierNICSearchOnAction" prefHeight="40.0" prefWidth="323.0" promptText="Search" style="-fx-border-color: #0984e3; -fx-border-radius: 8;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <Label layoutX="261.0" layoutY="236.0" prefHeight="36.0" prefWidth="193.0" text="Supplier NIC">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

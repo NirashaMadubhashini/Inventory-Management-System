@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CustomerFormContext" prefHeight="1000.0" prefWidth="1950.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customer.ManageCustomerFormController">
+   <children>
+      <Label layoutX="275.0" layoutY="150.0" text="Manage Customer">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="275.0" layoutY="198.0" prefHeight="5.0" prefWidth="261.0" />
+      <Pane prefHeight="67.0" prefWidth="1950.0" style="-fx-background-color: #007BFF;">
+         <children>
+            <Label layoutX="77.0" layoutY="18.0" text="Sell-" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="134.0" layoutY="13.0" text="X" textFill="ORANGE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="1778.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #007bff;                     -fx-background-radius: 8;" text="     Back" textFill="#fefeff">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1786.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/b%203.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TableView fx:id="tblManageCustomer" layoutX="275.0" layoutY="348.0" prefHeight="544.0" prefWidth="1295.0" AnchorPane.bottomAnchor="108.0" AnchorPane.leftAnchor="275.0" AnchorPane.rightAnchor="380.0" AnchorPane.topAnchor="348.0">
+        <columns>
+          <TableColumn fx:id="colCustomerNic" prefWidth="160.99996948242188" text="NIC" />
+            <TableColumn fx:id="colCustomerName" prefWidth="327.0" text="Name" />
+            <TableColumn fx:id="colCustomerTp" prefWidth="264.0" text="Tp" />
+            <TableColumn fx:id="colCustomerUpdate" prefWidth="290.0" text="Update" />
+            <TableColumn fx:id="colCustomerDelete" prefWidth="252.0" text="Delete" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtCustomerSearch" layoutX="275.0" layoutY="274.0" onAction="#CustomerSearchOnAction" prefHeight="40.0" prefWidth="397.0" promptText="Search" style="-fx-border-color: #0984e3; -fx-border-radius: 8;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="275.0" layoutY="221.0" prefHeight="36.0" prefWidth="193.0" text="Customer Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

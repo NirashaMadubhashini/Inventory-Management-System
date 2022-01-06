@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="ManageCategoryFormContext" prefHeight="1000.0" prefWidth="1950.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.category.ManageCategoryFormController">
+   <children>
+      <Label layoutX="136.0" layoutY="123.0" text="Manage Category">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="136.0" layoutY="178.0" prefHeight="0.0" prefWidth="251.0" />
+      <TableView fx:id="tblManageCategory" layoutX="136.0" layoutY="352.0" prefHeight="540.0" prefWidth="1683.0" AnchorPane.bottomAnchor="123.0" AnchorPane.leftAnchor="136.0" AnchorPane.rightAnchor="135.0" AnchorPane.topAnchor="352.0">
+        <columns>
+          <TableColumn fx:id="colCategoryId" prefWidth="135.0" text="Category Id" />
+          <TableColumn fx:id="colCategoryName" prefWidth="253.0" text="Category Name" />
+            <TableColumn fx:id="colCategoryDescription" prefWidth="258.0" text="Category Description" />
+            <TableColumn fx:id="colCategoryDate" prefWidth="254.0" text="Date" />
+            <TableColumn fx:id="colCategoryTime" prefWidth="244.0" text="Time" />
+            <TableColumn fx:id="colCategoryUpdate" prefWidth="268.0" text="Update" />
+            <TableColumn fx:id="colCategoryDelete" prefWidth="268.0" text="Delete" />
+        </columns>
+      </TableView>
+      <Pane layoutX="-2.0" prefHeight="67.0" prefWidth="1956.0" style="-fx-background-color: #007BFF;">
+         <children>
+            <Label layoutX="74.0" layoutY="18.0" text="Sell-" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="131.0" layoutY="13.0" text="X" textFill="ORANGE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="1776.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackCategoryOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #007bff;                     -fx-background-radius: 8;" text="     Back" textFill="#fefeff">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1783.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/b%203.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <TextField fx:id="txtCategorySearch" layoutX="136.0" layoutY="281.0" onAction="#CategorySearchOnAction" prefHeight="40.0" prefWidth="397.0" promptText="Search" style="-fx-border-color: #0984e3; -fx-border-radius: 8;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor></TextField>
+      <Label layoutX="136.0" layoutY="228.0" prefHeight="36.0" prefWidth="193.0" text="Category Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

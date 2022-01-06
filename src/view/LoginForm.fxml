@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="loginFormContext" prefHeight="1000.0" prefWidth="1950.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.LoginFormController">
+   <children>
+      <Pane layoutX="726.0" layoutY="143.0" prefHeight="738.0" prefWidth="567.0" style="-fx-border-color: black; -fx-border-radius: 8; -fx-background-color: #ffffff; -fx-border-width: 3;">
+         <children>
+            <ImageView fitHeight="168.0" fitWidth="209.0" layoutX="200.0" layoutY="29.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/user%201.png" />
+               </image>
+            </ImageView>
+            <Label layoutX="47.0" layoutY="231.0" text="Login">
+               <font>
+                  <Font name="Arial Bold" size="48.0" />
+               </font>
+            </Label>
+            <JFXTextField fx:id="txtUserName" labelFloat="true" layoutX="63.0" layoutY="338.0" onAction="#moveToPassword" prefHeight="44.0" prefWidth="441.0" promptText="User Name">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <JFXTextField fx:id="txtPassWord" labelFloat="true" layoutX="63.0" layoutY="442.0" prefHeight="44.0" prefWidth="441.0" promptText="Password">
+               <font>
+                  <Font name="System Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </JFXTextField>
+            <Button layoutX="47.0" layoutY="608.0" mnemonicParsing="false" onAction="#openDashBoardOnAction" prefHeight="55.0" prefWidth="153.0" style="-fx-background-color: #0069D9; -fx-background-radius: 8; " text="  Login" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="24.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <Label layoutX="63.0" layoutY="503.0" text="Forgotten Password ?" />
+            <ImageView fitHeight="33.0" fitWidth="37.0" layoutX="56.0" layoutY="619.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/padlock.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Pane prefHeight="67.0" prefWidth="1950.0" style="-fx-background-color: #007BFF;">
+         <children>
+            <Label layoutX="71.0" layoutY="18.0" text="Sell-" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="128.0" layoutY="13.0" text="X" textFill="ORANGE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+   </children>
+</AnchorPane>

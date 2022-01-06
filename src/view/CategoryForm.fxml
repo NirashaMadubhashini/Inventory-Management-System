@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CategoryFormContext" prefHeight="518.0" prefWidth="632.0" style="-fx-background-color: #ffffff; " xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.category.CategoryFormController">
+   <children>
+      <Button fx:id="btnAddCategory" layoutX="74.0" layoutY="400.0" mnemonicParsing="false" onAction="#AddCategoryOnAction" prefHeight="45.0" prefWidth="164.0" style="-fx-background-color: #1e90ff; -fx-background-radius: 8; " text="Add Category" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtCategoryName" layoutX="76.0" layoutY="150.0" onKeyReleased="#CategoryName_keyReleased" prefHeight="40.0" prefWidth="480.0" style="-fx-border-color: #0984e3; -fx-border-radius: 8;" />
+      <TextField fx:id="txtCategoryDescription" layoutX="76.0" layoutY="283.0" onKeyReleased="#CategoryDescription_keyReleased" prefHeight="40.0" prefWidth="480.0" style="-fx-border-color: #0984e3; -fx-border-radius: 8;" />
+      <Pane layoutX="-3.0" prefHeight="85.0" prefWidth="635.0" style="-fx-background-color: #b2bec3;">
+         <children>
+            <Label layoutX="210.0" layoutY="27.0" text="Add Category" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="76.0" layoutY="121.0" text="Category Name">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+      <Label layoutX="76.0" layoutY="249.0" text="Category Description">
+         <font>
+            <Font name="Arial" size="18.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

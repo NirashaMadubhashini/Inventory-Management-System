@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Created with Jaspersoft Studio version 6.17.0.final using JasperReports Library version 6.17.0-6d93193241dd8cc42629e188b94f9e0bc5722efd  -->
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="SupplierHistory" pageWidth="595" pageHeight="842" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="3908db64-8c07-499a-b722-7c819ba69712">
+	<property name="com.jaspersoft.studio.data.defaultdataadapter" value="JDBC Connection"/>
+	<property name="com.jaspersoft.studio.data.sql.tables" value=""/>
+	<queryString>
+		<![CDATA[select orderId , sum(qty) as qty from supplierorderdetail group by orderid order by qty desc;]]>
+	</queryString>
+	<field name="orderId" class="java.lang.String">
+		<property name="com.jaspersoft.studio.field.name" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.label" value="orderId"/>
+		<property name="com.jaspersoft.studio.field.tree.path" value="supplierorderdetail"/>
+		<fieldDescription><![CDATA[]]></fieldDescription>
+	</field>
+	<field name="qty" class="java.math.BigDecimal">
+		<property name="com.jaspersoft.studio.field.name" value="qty"/>
+		<property name="com.jaspersoft.studio.field.label" value="qty"/>
+	</field>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="110" splitType="Stretch">
+			<textField pattern="MMMMM dd, yyyy">
+				<reportElement x="10" y="-10" width="170" height="30" uuid="023e4124-95cc-493e-9bd2-0b34d207216e"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<textField pattern="HH:mm">
+				<reportElement x="500" y="-10" width="80" height="30" uuid="b777070c-6d23-4cdf-850c-27df194021a5"/>
+				<textElement>
+					<font size="16"/>
+				</textElement>
+				<textFieldExpression><![CDATA[new java.util.Date()]]></textFieldExpression>
+			</textField>
+			<staticText>
+				<reportElement x="245" y="10" width="100" height="30" forecolor="#050400" uuid="8e11a84a-e4a5-4d1c-a9fe-2c6cc682dae5"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Sell -]]></text>
+			</staticText>
+			<line>
+				<reportElement x="-20" y="60" width="595" height="1" uuid="934d3b42-9e26-4a36-ad64-a21a27f67204"/>
+				<graphicElement>
+					<pen lineWidth="3.0"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="130" y="80" width="330" height="30" forecolor="#1527CF" uuid="29765619-706e-4e48-b981-24978e3b392c"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Supplier Order History Report]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="298" y="10" width="30" height="30" forecolor="#FFA500" uuid="19392f57-c1f8-4b4f-bd2f-429d94d25cb5"/>
+				<textElement>
+					<font size="22" isBold="true"/>
+				</textElement>
+				<text><![CDATA[X]]></text>
+			</staticText>
+		</band>
+	</title>
+	<summary>
+		<band height="351" splitType="Stretch">
+			<bar3DChart>
+				<chart evaluationTime="Report">
+					<reportElement x="0" y="10" width="555" height="341" uuid="d991f6e6-350b-4757-b7c7-c498143920b6"/>
+					<chartTitle/>
+					<chartSubtitle/>
+					<chartLegend/>
+				</chart>
+				<categoryDataset>
+					<dataset resetType="Report"/>
+					<categorySeries>
+						<seriesExpression><![CDATA[$F{orderId}]]></seriesExpression>
+						<categoryExpression><![CDATA[0]]></categoryExpression>
+						<valueExpression><![CDATA[$F{qty}]]></valueExpression>
+						<labelExpression><![CDATA[$F{orderId}]]></labelExpression>
+					</categorySeries>
+				</categoryDataset>
+				<bar3DPlot>
+					<plot/>
+					<itemLabel/>
+					<categoryAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</categoryAxisFormat>
+					<valueAxisFormat>
+						<axisFormat labelColor="#000000" tickLabelColor="#000000" axisLineColor="#000000"/>
+					</valueAxisFormat>
+				</bar3DPlot>
+			</bar3DChart>
+		</band>
+	</summary>
+</jasperReport>

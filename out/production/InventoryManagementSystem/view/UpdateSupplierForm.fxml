@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="UpdateSupplierFormContext" prefHeight="550.0" prefWidth="600.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.supplier.UpdateSupplierFormController">
+   <children>
+      <Button fx:id="btnUpdateSupplier" layoutX="69.0" layoutY="453.0" mnemonicParsing="false" onAction="#UpdateSupplierOnAction" prefHeight="45.0" prefWidth="164.0" style="-fx-background-color: #44bd32; -fx-background-radius: 8;" text="Update" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="18.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <TextField fx:id="txtUpdateSupplierName" layoutX="69.0" layoutY="163.0" onKeyReleased="#SupplierName_keyReleased" prefHeight="40.0" prefWidth="480.0" style="-fx-border-color: #0984e3; -fx-border-radius: 8;" />
+      <Pane layoutX="-3.0" prefHeight="85.0" prefWidth="640.0" style="-fx-background-color: #1e90ff;">
+         <children>
+            <Label layoutX="201.0" layoutY="25.0" text="Update Supplier" textFill="WHITE">
+               <font>
+                  <Font name="Arial Bold" size="30.0" />
+               </font>
+            </Label>
+         </children>
+      </Pane>
+      <Label layoutX="85.0" layoutY="131.0" text="Supplier Name">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUpdateSupplierEmail" layoutX="69.0" layoutY="255.0" onKeyReleased="#SupplierEmail_keyReleased" prefHeight="40.0" prefWidth="480.0" style="-fx-border-color: #0984e3; -fx-border-radius: 8;" />
+      <Label layoutX="85.0" layoutY="225.0" text="Supplier email">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+      <TextField fx:id="txtUpdateSupplierDescription" layoutX="69.0" layoutY="357.0" onKeyReleased="#SupplierDescription_keyReleased" prefHeight="40.0" prefWidth="480.0" style="-fx-border-color: #0984e3; -fx-border-radius: 8;" />
+      <Label layoutX="85.0" layoutY="327.0" text="Supplier Description">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

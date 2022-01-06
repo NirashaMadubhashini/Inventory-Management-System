@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="CustomerOrderHistoryContext" prefHeight="1000.0" prefWidth="1950.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.customer.CustomerOrderHistoryFormController">
+   <children>
+      <Pane prefHeight="67.0" prefWidth="1950.0" style="-fx-background-color: #007BFF;">
+         <children>
+            <Label layoutX="66.0" layoutY="18.0" text="Sell-" textFill="WHITE">
+               <font>
+                  <Font name="Arial" size="28.0" />
+               </font>
+            </Label>
+            <Label layoutX="123.0" layoutY="13.0" text="X" textFill="ORANGE">
+               <font>
+                  <Font name="Arial Bold" size="35.0" />
+               </font>
+            </Label>
+            <Button layoutX="1746.0" layoutY="14.0" mnemonicParsing="false" onAction="#BackCustomerOrderOnAction" prefHeight="40.0" prefWidth="117.0" style="-fx-background-color: #007bff;                     -fx-background-radius: 8;" text="     Back" textFill="#fefeff">
+               <font>
+                  <Font name="Arial Bold" size="20.0" />
+               </font>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </Button>
+            <ImageView fitHeight="30.0" fitWidth="32.0" layoutX="1754.0" layoutY="19.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../assets/b%203.png" />
+               </image>
+            </ImageView>
+         </children>
+      </Pane>
+      <Label layoutX="155.0" layoutY="101.0" text="History Of The Customer Order">
+         <font>
+            <Font name="Arial Bold" size="30.0" />
+         </font>
+      </Label>
+      <Separator layoutX="155.0" layoutY="166.0" prefHeight="5.0" prefWidth="446.0" />
+      <TableView fx:id="tblCustomerHistory" layoutX="155.0" layoutY="318.0" prefHeight="540.0" prefWidth="1601.0" AnchorPane.leftAnchor="155.0" AnchorPane.rightAnchor="194.0">
+        <columns>
+          <TableColumn fx:id="colCustomerHistoryOrderId" prefWidth="108.99996948242188" text="Order-Id" />
+          <TableColumn fx:id="colCustomerHistoryCustomerNIC" prefWidth="161.0" text="Customer NIC" />
+            <TableColumn fx:id="collCustomerHistoryProductId" prefWidth="170.0" text="Product Id" />
+            <TableColumn fx:id="colCustomerHistoryProductName" prefWidth="230.0" text="Product Name" />
+            <TableColumn fx:id="colCustomerHistoryUnitPrice" prefWidth="159.0" text="Unit Price" />
+            <TableColumn fx:id="colCustomerHistoryQtyOnHand" prefWidth="183.0" text="QtyOnHand" />
+            <TableColumn fx:id="colCustomerHistoryTotal" prefWidth="193.0" text="Total" />
+            <TableColumn fx:id="colCustomerHistoryDate" prefWidth="201.0" text="Date" />
+            <TableColumn fx:id="colCustomerHistoryTime" prefWidth="193.0" text="Time" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnCustomerReport" layoutX="1256.0" layoutY="230.0" mnemonicParsing="false" onMouseClicked="#generateSql_Chart" prefHeight="60.0" prefWidth="472.0" style="-fx-background-color: #44bd32; -fx-background-radius: 8; " text="Show Reports" textFill="WHITE">
+         <font>
+            <Font name="Arial Bold" size="24.0" />
+         </font>
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </Button>
+      <ImageView fitHeight="30.0" fitWidth="36.0" layoutX="1361.0" layoutY="245.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../assets/report%20(1).png" />
+         </image>
+      </ImageView>
+      <TextField fx:id="txtCustomerNICSearch" layoutX="155.0" layoutY="252.0" onAction="#CustomerNICSearchOnAction" prefHeight="40.0" prefWidth="397.0" promptText="Search" style="-fx-border-color: #0984e3; -fx-border-radius: 8;">
+         <cursor>
+            <Cursor fx:constant="HAND" />
+         </cursor>
+      </TextField>
+      <Label layoutX="155.0" layoutY="199.0" prefHeight="36.0" prefWidth="193.0" text="Customer NIC">
+         <font>
+            <Font name="Arial" size="20.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>
