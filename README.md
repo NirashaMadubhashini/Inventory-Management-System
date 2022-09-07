@@ -8,14 +8,13 @@ This project is done by using MVC Architecture and MySQL database
 *MySQL
 
 <b>#Login<br></b>
-![login](src/assests/project/login.png)<br>
-<b>#Admin<br><b>
-![adminDash](src/assests/project/admindash.png)<br>
-![Income](src/assests/project/Income.png)<br>
-![manageItem](src/assests/project/itemmange.png)<br>
-<b>#Customer<br></b>
-![customerdash](src/assests/project/userdash.png)<br>
-![addCustomer](src/assests/project/addcustomer.png)<br>
-![placeOrder](src/assests/project/placeorder.png)<br>
+![login](src/assets/projects/login.png)<br>
+<b>#DashBoard<br><b>
+![adminDash](src/assets/projects/dashboard.png)<br>
+![add](src/assets/projects/add.png)<br>
+![manage](src/assets/projects/manage.png)<br>
+<b>#PlaceOrder<br></b>
+![order](src/assets/projects/placeOrder.png)
+
 
 
