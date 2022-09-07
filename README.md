@@ -11,7 +11,9 @@ This project is done by using MVC Architecture and MySQL database
 ![login](src/assets/projects/login.png)<br>
 <b>#DashBoard<br><b>
 ![adminDash](src/assets/projects/dashboard.png)<br>
+<b>#Add<br><b>
 ![add](src/assets/projects/add.png)<br>
+<b>#DashBoard<br><b>
 ![manage](src/assets/projects/manage.png)<br>
 <b>#PlaceOrder<br></b>
 ![order](src/assets/projects/placeOrder.png)
